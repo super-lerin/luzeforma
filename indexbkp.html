@@ -18,7 +18,7 @@
 <meta property="og:url" content="https://super-lerin.github.io/luzeforma/">
 <meta property="og:title" content="Luz em Formas - Produção, Cenografia e Eventos">
 <meta property="og:description" content="Transformamos ideias em experiências visuais memoráveis. Cenografia, iluminação cênica, figurinos e produção técnica completa.">
-<meta property="og:image" content="meta.png">
+<meta property="og:image" content="https://super-lerin.github.io/luzeforma/meta.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:locale" content="pt_BR">
@@ -29,11 +29,11 @@
 <meta name="twitter:url" content="https://super-lerin.github.io/luzeforma/">
 <meta name="twitter:title" content="Luz em Formas - Produção, Cenografia e Eventos">
 <meta name="twitter:description" content="Transformamos ideias em experiências visuais memoráveis. Cenografia, iluminação cênica, figurinos e produção técnica completa.">
-<meta name="twitter:image" content="meta.png">
+<meta name="twitter:image" content="https://super-lerin.github.io/luzeforma/assets/meta.png">
 
 <!-- Favicon e Ícones para Dispositivos Móveis -->
-<link rel="icon" type="image/png" href="meta.png">
-<link rel="apple-touch-icon" sizes="180x180" href="meta.png">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
 
 <!-- Dados Estruturados Schema.org (JSON-LD para Google Rich Snippets) -->
 <script type="application/ld+json">
@@ -41,7 +41,7 @@
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
   "name": "Luz em Formas",
-  "image": "meta.png",
+  "image": "https://super-lerin.github.io/luzeforma/assets/meta.png",
   "description": "Empresa especializada em cenografia, iluminação cênica, figurinos e produção técnica de eventos.",
   "url": "https://www.luzemformas.com.br",
   "email": "contato@luzemformas.com",
@@ -1299,7 +1299,7 @@
     <section id="sobre">
         <div class="about">
             <div class="about-image reveal-left">
-                <img src="pagina-02.jpg" alt="Luz em Formas">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 500'%3E%3Crect fill='%232d2d2d' width='600' height='500'/%3E%3Ccircle cx='300' cy='200' r='80' fill='%23e8a838' opacity='0.3'/%3E%3Ccircle cx='200' cy='300' r='60' fill='%23e8a838' opacity='0.2'/%3E%3Ccircle cx='400' cy='350' r='70' fill='%23e8a838' opacity='0.25'/%3E%3Ctext x='300' y='250' font-family='sans-serif' font-size='24' fill='%23e8a838' text-anchor='middle'%3ELuz em Formas%3C/text%3E%3C/svg%3E" alt="Luz em Formas">
             </div>
             <div class="about-content reveal-right">
                 <p class="section-label">Sobre Nós</p>
@@ -1609,15 +1609,15 @@
 
         // Portfolio
         const portfolioData = [
-            { title: 'Cenografia Teatro Municipal', category: 'cenografia', image: 'pagina-03.jpg' },
-            { title: 'Iluminação Festival de Luzes', category: 'iluminacao', image: 'pagina-04.jpg' },
-            { title: 'Exposição Arte Contemporânea', category: 'exposicoes', image: 'pagina-05.jpg' },
-            { title: 'Evento Corporativo Anual', category: 'eventos', image: 'pagina-06.jpg' },
-            { title: 'Cenografia Ópera Nacional', category: 'cenografia', image: 'pagina-07.jpg' },
-            { title: 'Iluminação Show Internacional', category: 'iluminacao', image: 'pagina-08.jpg' },
-            { title: 'Exposição Fotografia Urbana', category: 'exposicoes', image: 'pagina-09.jpg' },
-            { title: 'Festival de Música', category: 'eventos', image: 'pagina-10.jpg' },
-            { title: 'Cenografia Peça Teatral', category: 'cenografia', image: 'pagina-11.jpg' },
+            { title: 'Cenografia Teatro Municipal', category: 'cenografia', color: '#e8a838' },
+            { title: 'Iluminação Festival de Luzes', category: 'iluminacao', color: '#f4b942' },
+            { title: 'Exposição Arte Contemporânea', category: 'exposicoes', color: '#e8a838' },
+            { title: 'Evento Corporativo Anual', category: 'eventos', color: '#f4b942' },
+            { title: 'Cenografia Ópera Nacional', category: 'cenografia', color: '#e8a838' },
+            { title: 'Iluminação Show Internacional', category: 'iluminacao', color: '#f4b942' },
+            { title: 'Exposição Fotografia Urbana', category: 'exposicoes', color: '#e8a838' },
+            { title: 'Festival de Música', category: 'eventos', color: '#f4b942' },
+            { title: 'Cenografia Peça Teatral', category: 'cenografia', color: '#e8a838' },
         ];
 
         const portfolioGrid = document.getElementById('portfolioGrid');
@@ -1629,7 +1629,7 @@
                 div.className = 'portfolio-item reveal';
                 div.style.animationDelay = (index * 0.1) + 's';
                 div.innerHTML = `
-                    <img src="${item.image}" alt="${item.title}">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 250'%3E%3Crect fill='%231a1a1a' width='400' height='250'/%3E%3Crect fill='${encodeURIComponent(item.color)}' opacity='0.2' width='400' height='250'/%3E%3Ccircle cx='200' cy='125' r='60' fill='${encodeURIComponent(item.color)}' opacity='0.4'/%3E%3Ctext x='200' y='135' font-family='sans-serif' font-size='14' fill='white' text-anchor='middle'%3E${encodeURIComponent(item.title)}%3C/text%3E%3C/svg%3E" alt="${item.title}">
                     <div class="portfolio-overlay">
                         <h4>${item.title}</h4>
                         <p>${item.category}</p>
